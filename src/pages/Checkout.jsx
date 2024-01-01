@@ -1,10 +1,12 @@
 
-const Checkout = () => {
+const Checkout = (props) => {
+  console.log(props);
   return (
     <div>
-      Checkout
+      checkout
+     <h1>{props.productname}</h1>
     </div>
   )
 }
 
-export default Checkout
+export default Checkout;

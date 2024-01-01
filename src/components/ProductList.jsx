@@ -4,9 +4,11 @@ import product3 from "../assets/watch3.jpeg";
 import product4 from "../assets/watch4.jpeg";
 import product5 from "../assets/watch5.jpeg";
 import product6 from "../assets/watch6.jpeg";
+import Checkout from "../pages/Checkout";
 
 
 import Product from "./Product";
+import { NavLink } from "react-router-dom";
 
 const ProductList = () => {
   const watchList = [
@@ -68,7 +70,9 @@ const ProductList = () => {
 
         {
           watchList.map((product) => {
-            return <Product key={product.id} productname={product.productname} productdescription={product.productdescription} productimg={product.productimg} newprice={product.newprice} oldprice={product.oldprice} />
+            <Checkout key={product.id} productname={product.productname} productdescription={product.productdescription} productimg={product.productimg} newprice={product.newprice} oldprice={product.oldprice}  />
+            return <NavLink to={"/checkout"} ><Product key={product.id} productname={product.productname} productdescription={product.productdescription} productimg={product.productimg} newprice={product.newprice} oldprice={product.oldprice} /></NavLink>
+              
           })
         }
 

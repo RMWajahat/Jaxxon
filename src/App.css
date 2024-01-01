@@ -4,6 +4,11 @@ html::-webkit-scrollbar{
   width: 0;
 }
 
+::selection{
+  background: transparent;
+  color: #000000;
+}
+
 *,*::before,*::after{
   padding:0;
   margin: 0;
@@ -75,9 +80,27 @@ a{
   height: 100%;
   text-transform: uppercase;
 }
+
 .navbar .inner .links .contact{
   font-size: 1.2vw;
   font-weight: 300;
+  position: relative;
+}
+.navbar .inner .links .contact::before{
+ content: '';
+ width: 0%;
+ height: 2px;
+ background: var(--product-desc-clr);
+ position: absolute;
+ bottom: 0;
+ transition: 200ms ease-in-out;
+}
+
+.navbar .inner .links .contact:hover{
+  font-weight: 700;
+}
+.navbar .inner .links .contact:hover::before{
+  width: 100%;
 }
 .navbar .inner .links .carticon{
   font-size: 1.7vw;
@@ -250,9 +273,9 @@ footer{
 footer .footerlogo{
   height: 3vw;
   position: absolute;
-  left: 0.5%;
+  left: 0;
   top: 0;
-  transform:  rotate(90deg);
+  transform:  rotate(90deg) ;
   transform-origin: left bottom;
 }
 footer .left{
@@ -316,6 +339,7 @@ footer .left .copymsg{
   flex-direction: column;
   gap: 5vw;
   position: relative;
+  background: #ffffff;
 }
 .contactpage .contacthelp{
   width: 100%;
@@ -327,7 +351,7 @@ footer .left .copymsg{
 }
 .contactpage .contacthelp h1{
   text-transform: uppercase;
-  font-size: 2.4vw;
+  font-size: 3.4vw;
   font-weight: 800;
   color: var(--product-clr);
   letter-spacing: 2px;
@@ -337,9 +361,57 @@ footer .left .copymsg{
   font-weight: 600;
 }
 .contactpage .morehelp{
+  
   height: fit-content;
-  margin: auto;
+  width: 100% ;
+  margin: 3vw auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 1.8vw;
+}
+.contactpage .morehelp .stillhelp{
+  font-weight: 800;
+  font-size: 3.1vw;
+  text-transform: uppercase;
+  letter-spacing: 2px ;
+}
+.contactpage .morehelp span{
+  font-weight: 200;
+  font-size: 1.3vw;
+  text-align: center;
+  width: 30%;
+  color: var(--product-desc-clr);
+}
+
+.contactpage .morehelp .getintouch{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 5vw;
+}
+.contactpage .morehelp .getintouch .contactway{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ gap: 2px;
+}
+.contactpage .morehelp .getintouch .contactway h1{
+ font-weight: 800;
+ text-transform: uppercase;
+ font-size: 2vw;
+ letter-spacing: 2px;
+
+}
+.contactpage .morehelp .getintouch .contactway span,
+.contactpage .morehelp .getintouch .contactway a{
+ font-weight: 200;
+ text-transform: capitalize;
+ font-size: 1.25vw;
+ width: 100%;
+}
+.contactpage .morehelp .getintouch .contactway a{
+ text-decoration: underline;
 }
