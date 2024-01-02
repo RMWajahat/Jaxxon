@@ -108,6 +108,32 @@ a{
   padding-right: 0.3vw;
 }
 
+@media screen and (width<=850px) {
+  /* navbar */
+.navbar{
+  width: 100vw;
+  height: 8vw;
+}
+.navbar .inner img{
+ height: 3.2vh;
+}
+.navbar .inner .links{
+  gap: 3vw;
+}
+
+.navbar .inner .links .contact{
+  font-size: 2.7vw;
+}
+
+.navbar .inner .links .carticon{
+  font-size: 3.4vw;
+  padding-right: 8vw;
+}
+}
+
+
+
+
 
 
 /* header  */
@@ -166,6 +192,40 @@ object-position: center;
   font-weight: 300;
   letter-spacing: 1px;
 }
+
+@media screen and (width<=850px) {
+  /* header  */
+.swiper{
+  height: 90vh;
+  width: 100vw;
+  }
+  .swiper img{
+  object-position: right;
+  }
+  
+  .sliderheader{
+    height: 90vh;
+  }
+  
+  .shopnow{
+    font-size: 2.4vw;
+    padding: 3.4vw 17vw;
+    font-weight: 500;
+  }
+  .shopnow:hover{
+    background: rgba(243, 242, 242, 0.873);
+  }
+  .sliderheader .headertag{
+    font-size: 5.6vw;
+    line-height: 4.8vw;
+    bottom: 19%;
+   filter:drop-shadow( 0 0 10px rgba(0, 0, 0, 0.654));
+  }
+  .sliderheader .headertag span{
+    font-size: 3.8vw;
+  }
+}
+
 
 
 /* products */
@@ -253,6 +313,44 @@ object-position: center;
  text-decoration: line-through;
 }
 
+@media screen and (width<=850px) {
+/* products */
+.productslist{
+ 
+  gap: 14px;
+}
+.productslist h1{
+  
+  font-size: 3.1vw;
+}
+.productslist .products .product{
+ gap: 10px;
+}
+.productslist .products .product img{
+  height: 50vw;
+}
+
+.productslist .products .product .gotoproduct{
+ gap: 6px;
+}
+.productslist .products .product .gotoproduct h1,.productslist .products .product .gotoproduct h3{
+ font-size: 2.6vw;
+ word-spacing: -3px;
+}
+.productslist .products .product .gotoproduct h3{
+ font-size: 1.7vw;
+ word-spacing: 0.5px;
+}
+.productslist .products .product .gotoproduct .price{
+
+ font-size: 2.2vw;
+}
+.productslist .products .product .gotoproduct .price .oldprice{
+ font-size: 2vw;
+}
+}
+
+
 
 /* footer  */
 footer{
@@ -329,6 +427,53 @@ footer .left .copymsg{
 }
 
 
+@media screen and (width<=850px) {
+/* footer  */
+footer{
+  margin-top: 5vw;
+  min-height: 16vw;
+  gap: 5vw;
+}
+
+footer .footerlogo{
+  height: 7vw;
+  left: 0;
+  top: -19%;
+}
+footer .left{
+  gap: 0.6vh;
+  padding-left: 8vw;
+}
+footer .left .footerlinks{
+  border-top: 2px solid rgb(77, 76, 76,0.7);
+  font-size: 2vw;
+  line-height: 4vw;
+}
+footer .left .details{
+  font-weight: 200;
+  
+  line-height: 2.2vh;
+  font-size: 2.3vw;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  padding: 0.6vw 0;
+}
+footer .left .sociallinks{
+ gap: 3.2vw;
+}
+footer .left .sociallinks a .social{
+ font-size: 3vw;
+}
+footer .left .copymsg{
+ font-size: 2vw;
+}
+
+}
+
+
+
+
+
 /* contact page  */
 .contactpage{
   width: 86vw;
@@ -348,6 +493,10 @@ footer .left .copymsg{
   flex-direction: column;
   gap: 2vw;
   align-items: center;
+}
+.contactpage .contacthelp iframe{
+  width: 100%;
+  margin: auto;
 }
 .contactpage .contacthelp h1{
   text-transform: uppercase;
@@ -415,6 +564,53 @@ footer .left .copymsg{
 .contactpage .morehelp .getintouch .contactway a{
  text-decoration: underline;
 }
+
+@media screen and (width<=850px) {
+/* contact page  */
+.contactpage{
+  width: 90vw;
+}
+.contactpage .contacthelp h1{
+  font-size: 5vw;
+  word-spacing: -1px;
+}
+.contactpage .morehelp{
+  
+  gap: 1vw;
+  margin: 2vw auto;
+  width: 100%;
+  
+}
+.contactpage .morehelp .stillhelp{
+  font-size: 4.1vw;
+}
+.contactpage .morehelp span{
+  
+  font-size: 2vw;
+  width: 50%;
+}
+
+.contactpage .morehelp .getintouch{
+  margin-top: 3vw;
+  width: 80%;
+}
+.contactpage .morehelp .getintouch .contactway{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   gap: 4px;
+}
+.contactpage .morehelp .getintouch .contactway h1{
+ font-size: 2.7vw;
+
+}
+.contactpage .morehelp .getintouch .contactway span,
+.contactpage .morehelp .getintouch .contactway a{
+ font-size: 1.7vw;
+}
+}
+
+
 
 
 /* checkout  */
@@ -578,6 +774,93 @@ button{
 }
 
 
+@media screen and (width<=850px) {
+/* checkout  */
+.checkout{
+  height: fit-content;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.5fr 1fr;
+  gap: 0;
+  margin-top:3vh;
+  margin-bottom:3vh;
+
+}
+.checkout .productimage{
+  height: 40vh;
+}
+.checkout .productdetails{
+  width: 100%;
+  height: 80%;
+  gap: 4px;
+  padding-left:4vw;
+}
+.checkout .productdetails .productname{
+    font-size: 3.3vw;
+}
+.checkout .productdetails .desc{
+    font-size: 2vw;
+}
+.checkout .productdetails .pricing .newpricing{
+    font-size: 1.9vw;
+}
+.checkout .productdetails .pricing .oldpricing{
+    font-size: 1.8vw;
+}
+.checkout .productdetails .note{
+    font-size: 1.3vw;
+    
+}
+.checkout .productdetails .note::before{
+  
+    width: 240%;
+    
+}
+.checkout .productdetails .sizes{
+  margin-top: 16px;
+    gap: 4px;
+}
+.checkout .productdetails .sizes .sizetag{
+    font-size: 2.2vw;
+}
+.checkout .productdetails .sizes .sizesall{
+    font-size: 2vw;
+}
+.checkout .productdetails .addto{
+    width: 60%;
+    height: 6vh;
+}
+.checkout .productdetails .addto .addtocart{
+    font-size: 1.9vw;
+    padding: 1.9vw 6.5vw;
+    letter-spacing: 2px;
+    width: 100%;
+
+}
+.checkout .productdetails .addto .addtocart:active{
+
+    padding: 1.8vw 6.3vw;
+
+}
+.checkout .productdetails .addto .counters{
+    width: 10vw;
+    height: 65%;
+    padding: 1vw;
+}
+.checkout .productdetails .addto .counters button{
+    font-size: 3vw;
+    font-weight: 500;
+}
+.checkout .productdetails .addto .counters .count{
+    font-size: 2.6vw;
+    font-weight: 300;
+}
+
+}
+
+
+
+
+
 
 .facilities{
   width: 85%;
@@ -623,6 +906,35 @@ button{
 }
 
 
+@media screen and (width<=850px) {
+  .facilities{
+    width: 70%;
+    margin-top: 5.6vw;
+    
+  }
+  .facility{
+    gap: 7px;
+    min-width: 150px;
+  
+  }
+  .facility .iconImg{
+    font-size: 3.6vw;
+  
+  }
+  .facility h1{
+    font-size: 2.1vw;
+  
+  }
+  .facility p{
+    font-size: 1.5vw;
+    width: 14vw;
+  }
+
+}
+
+
+
+
 .homepagefacility{
   width: 90%;
   margin: auto;
@@ -657,6 +969,33 @@ button{
   width: 70%;
 }
 
+@media screen and (width<=850px) {
+  .homepagefacility{
+    width: 90%;
+    gap: 6vw;
+    
+  }
+  .homepagefacility .facility{
+    width:290px;
+    min-width: 200px;
+    gap: 10px;  
+  }
+  
+  .homepagefacility .facility .iconImg{
+    font-size: 4.6vw;
+  
+  }
+  .homepagefacility .facility h1{
+    font-size: 1.9vw;
+    width: 85%;
+  
+  }
+  .homepagefacility .facility p{
+    font-size: 1.8vw;
+  }
+
+}
+
 
 
 
@@ -670,7 +1009,7 @@ button{
   position: absolute;
   top: 10px;
   right: 0;
-  z-index: 5;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   gap: 0;
