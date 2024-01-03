@@ -1137,7 +1137,6 @@ font-weight: 400;
 .cartcontainer .allcarts .cartitem .right .otherremove{
 display: flex;
 flex-direction: row;
-justify-content: space-between;
 }
 .cartcontainer .allcarts .cartitem .right .otherremove .remove{
 font-size: 1.2vw;
@@ -1221,4 +1220,96 @@ width: 0;
 }
 .totalncheckout .checkoutpayment:hover{
  background: rgba(0, 0, 0, 0.866);
+}
+
+
+
+@media screen and (width<=850px) {
+/* cart pop */
+.cartcontainer{
+  width:70vw;
+  
+}
+.cartcontainer .head{
+ height: 4vh;
+}
+
+
+.cartcontainer .head h1{
+ font-size: 2.8vw;
+ font-weight: 700;
+ 
+}
+.cartcontainer .head .closecart{
+ font-size: 4vw;
+ margin-right: 2vw;
+}
+.cartcontainer .allcarts{
+width: 96%;
+gap: 8px;
+}
+.isempty{
+  width: 50vw;
+  height: 20vh;
+  font-size: 3.9vw;
+}
+.isempty a{
+  font-size: 2.8vw;
+  gap: 2px;
+}
+
+.cartcontainer .allcarts .cartitem{
+  padding-top: 14px;
+gap: 10px;
+
+}
+
+.cartcontainer .allcarts .cartitem .left img{
+height: 12vw;
+aspect-ratio: 1/1;
+object-fit: cover;
+margin-left: 1vw;
+}
+.cartcontainer .allcarts .cartitem .right{
+gap: 3.6vw;
+margin-bottom: 1vw;
+}
+.cartcontainer .allcarts .cartitem .right .detail{
+gap: 4px;
+
+}
+.cartcontainer .allcarts .cartitem .right .detail h1{
+font-size: 2.9vw;
+}
+.cartcontainer .allcarts .cartitem .right .detail small{
+font-size: 2.1vw;
+}
+.cartcontainer .allcarts .cartitem .right .otherremove .remove{
+font-size: 2.5vw;
+}
+.cartcontainer .allcarts .cartitem .right .otherremove .pricing{
+  font-size: 2.5vw;
+gap: 16px;
+}
+.cartcontainer .allcarts .cartitem .right .otherremove{
+  gap: 12vw;
+  }
+
+.totalncheckout{
+  height: 10vh;
+}
+.totalncheckout .totalpricing{
+  padding-left: 2.6vw;
+}
+.totalncheckout .totalpricing h1{
+ font-size: 2.7vw;
+}
+.totalncheckout .totalpricing small{
+ font-size: 2.5vw;
+ padding-left: 5px;
+}
+.totalncheckout .checkoutpayment{
+ letter-spacing: 4px;
+ font-size: 2.3vw;
+}
 }

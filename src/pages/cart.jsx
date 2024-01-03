@@ -20,7 +20,17 @@ const Cart = (props) => {
             }} />
         </div>
         <div className="allcarts">
-            {cartitems?<><Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            {cartitems?<>
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
+            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
             <Item watch={Watch2} itemname={"Lamma Watch Gold"} oldprice={500} newprice={486} typedata={'Gold, 22" + 24"'} />
             </>: <span className="isempty">Your Cart in Empty😢 <br /> <NavLink to={"products"} onClick={()=>{
                 props.setShowcart(false);
