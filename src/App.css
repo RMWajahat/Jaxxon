@@ -108,10 +108,10 @@ a{
   padding-right: 0.3vw;
 }
 
-@media screen and (width<=850px) {
+@media screen and (max-width:850px) {
   /* navbar */
 .navbar{
-  width: 100vw;
+  width: 98vw;
   height: 8vw;
 }
 .navbar .inner img{
@@ -122,12 +122,23 @@ a{
 }
 
 .navbar .inner .links .contact{
-  font-size: 2.7vw;
+  font-size: 2.3vw;
 }
 
 .navbar .inner .links .carticon{
-  font-size: 3.4vw;
-  padding-right: 8vw;
+  font-size: 3vw;
+}
+}
+@media screen and (max-width:380px) {
+  /* navbar */
+.navbar .inner .links .contact{
+  font-size: 2.9vw;
+}
+.navbar .inner img{
+  height: 2.5vh;
+ }
+.navbar .inner .links .carticon{
+  font-size: 4vw;
 }
 }
 
@@ -193,7 +204,7 @@ object-position: center;
   letter-spacing: 1px;
 }
 
-@media screen and (width<=850px) {
+@media screen and (max-width:850px) {
   /* header  */
 .swiper{
   height: 90vh;
@@ -201,6 +212,8 @@ object-position: center;
   }
   .swiper img{
   object-position: right;
+  width: 100vw;
+  height: 90vh;
   }
   
   .sliderheader{
@@ -208,21 +221,32 @@ object-position: center;
   }
   
   .shopnow{
-    font-size: 2.4vw;
-    padding: 3.4vw 17vw;
+    font-size: 2.1vw;
+    padding: 2.5vw 14vw;
     font-weight: 500;
   }
   .shopnow:hover{
     background: rgba(243, 242, 242, 0.873);
   }
   .sliderheader .headertag{
-    font-size: 5.6vw;
-    line-height: 4.8vw;
-    bottom: 19%;
-   filter:drop-shadow( 0 0 10px rgba(0, 0, 0, 0.654));
+    font-size: 5.3vw;
+    word-spacing: 2px;
+    line-height: 4.5vw;
+    bottom: 24%;
+    filter:drop-shadow( 0 0 10px rgba(0, 0, 0, 0.654));
   }
   .sliderheader .headertag span{
-    font-size: 3.8vw;
+    font-size: 3.3vw;
+  }
+}
+@media screen and (max-width:380px) {
+  /* header  */
+
+  .shopnow:hover{
+    background: rgba(243, 242, 242, 0.873);
+  }
+  .sliderheader .headertag{
+    bottom: 16%;
   }
 }
 
@@ -317,36 +341,69 @@ object-position: center;
 /* products */
 .productslist{
  
-  gap: 14px;
+  gap: 10px;
 }
 .productslist h1{
   
-  font-size: 3.1vw;
+  font-size: 2.8vw;
 }
 .productslist .products .product{
  gap: 10px;
+ margin-bottom: 3vw;
 }
 .productslist .products .product img{
-  height: 50vw;
+  height: 44vw;
 }
 
 .productslist .products .product .gotoproduct{
- gap: 6px;
+ gap: 5px;
 }
 .productslist .products .product .gotoproduct h1,.productslist .products .product .gotoproduct h3{
- font-size: 2.6vw;
+ font-size: 2.4vw;
  word-spacing: -3px;
 }
 .productslist .products .product .gotoproduct h3{
- font-size: 1.7vw;
- word-spacing: 0.5px;
+ font-size: 1.6vw;
+ word-spacing: 0.3px;
 }
 .productslist .products .product .gotoproduct .price{
 
- font-size: 2.2vw;
+ font-size: 1.85vw;
 }
 .productslist .products .product .gotoproduct .price .oldprice{
- font-size: 2vw;
+ font-size: 1.8vw;
+}
+}
+
+@media screen and (max-width:380px) {
+  /* products */
+.productslist{
+ 
+  gap: 10px;
+}
+.productslist h1{
+  font-size: 4vw;
+}
+.productslist .products .product img{
+  height: 50vh;
+}
+
+.productslist .products .product .gotoproduct{
+ gap: 3px;
+}
+.productslist .products .product .gotoproduct h1,.productslist .products .product .gotoproduct h3{
+ font-size: 3vw;
+ letter-spacing: -0.5px;
+}
+.productslist .products .product .gotoproduct h1{
+ font-size: 4.1vw;
+ letter-spacing: 1px;
+}
+.productslist .products .product .gotoproduct .price{
+ font-size: 4.3vw;
+}
+.productslist .products .product .gotoproduct .price .oldprice{
+ font-size: 3.9vw;
 }
 }
 
@@ -430,44 +487,77 @@ footer .left .copymsg{
 @media screen and (width<=850px) {
 /* footer  */
 footer{
-  margin-top: 5vw;
+  margin-top: 3vw;
   min-height: 16vw;
   gap: 5vw;
 }
 
 footer .footerlogo{
-  height: 7vw;
+  height: 6vw;
   left: 0;
   top: -19%;
 }
 footer .left{
-  gap: 0.6vh;
+  gap: 0.9vh;
   padding-left: 8vw;
 }
 footer .left .footerlinks{
-  border-top: 2px solid rgb(77, 76, 76,0.7);
+  border-top:1.52px solid rgb(77, 76, 76,0.7);
   font-size: 2vw;
-  line-height: 4vw;
+  line-height: 3vw;
+  width: 50%;
 }
 footer .left .details{
   font-weight: 200;
-  
-  line-height: 2.2vh;
-  font-size: 2.3vw;
-  word-spacing: 2px;
-  letter-spacing: 1px;
+  line-height: 3.1vh;
+  font-size: 2vw;
+  word-spacing: 1px;
+  letter-spacing: 0px;
   padding: 0.6vw 0;
 }
 footer .left .sociallinks{
- gap: 3.2vw;
+ gap: 3.5vw;
 }
 footer .left .sociallinks a .social{
- font-size: 3vw;
+ font-size: 2.6vw;
 }
 footer .left .copymsg{
- font-size: 2vw;
+ font-size: 1.8vw;
+ transform: translateY(10px);
 }
 
+}
+
+@media screen and (max-width:380px) {
+/* footer  */
+footer{
+  gap: 8vw;
+}
+
+footer .footerlogo{
+  height: 9vw;
+  opacity: 0.7;
+}
+footer .left{
+  gap: 2vw;
+}
+footer .left .footerlinks{
+  border-top:1px solid rgb(77, 76, 76,0.7);
+  font-size: 2.8vw;
+  line-height: 3.7vw;
+  width: 50%;
+}
+footer .left .details{
+  line-height: 2vh;
+  font-size: 3.2vw;
+  letter-spacing: 0.5px;
+}
+footer .left .sociallinks{
+ gap: 3.5vw;
+}
+footer .left .sociallinks a .social{
+ font-size: 4.5vw;
+}
 }
 
 
@@ -607,6 +697,36 @@ footer .left .copymsg{
 .contactpage .morehelp .getintouch .contactway span,
 .contactpage .morehelp .getintouch .contactway a{
  font-size: 1.7vw;
+}
+}
+@media screen and (max-width:380px) {
+/* contact page  */
+.contactpage .contacthelp h1{
+  font-size: 5.6vw;
+  letter-spacing: 0;
+}
+
+.contactpage .morehelp .stillhelp{
+  font-size: 4.9vw;
+}
+.contactpage .morehelp span{
+  
+  font-size: 2.5vw;
+  width: 60%;
+}
+
+
+.contactpage .morehelp .getintouch{
+  width: 90%;
+}
+.contactpage .morehelp .getintouch .contactway h1{
+ font-size: 3.2vw;
+ letter-spacing: 0;
+
+}
+.contactpage .morehelp .getintouch .contactway span,
+.contactpage .morehelp .getintouch .contactway a{
+ font-size: 2.3vw;
 }
 }
 
@@ -778,8 +898,9 @@ button{
 /* checkout  */
 .checkout{
   height: fit-content;
+  padding: 3vw 0;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.5fr 1fr;
+  grid-template-rows: 0.6fr 1fr;
   gap: 0;
   margin-top:3vh;
   margin-bottom:3vh;
@@ -791,14 +912,14 @@ button{
 .checkout .productdetails{
   width: 100%;
   height: 80%;
-  gap: 4px;
-  padding-left:4vw;
+  gap: 1px;
+  padding-left:3vw;
 }
 .checkout .productdetails .productname{
     font-size: 3.3vw;
 }
 .checkout .productdetails .desc{
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 .checkout .productdetails .pricing .newpricing{
     font-size: 1.9vw;
@@ -812,33 +933,33 @@ button{
 }
 .checkout .productdetails .note::before{
   
-    width: 240%;
+    width: 250%;
     
 }
 .checkout .productdetails .sizes{
   margin-top: 16px;
-    gap: 4px;
+  gap: 4px;
 }
 .checkout .productdetails .sizes .sizetag{
-    font-size: 2.2vw;
+    font-size: 2.1vw;
 }
 .checkout .productdetails .sizes .sizesall{
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 .checkout .productdetails .addto{
     width: 60%;
     height: 6vh;
 }
 .checkout .productdetails .addto .addtocart{
-    font-size: 1.9vw;
-    padding: 1.9vw 6.5vw;
+    font-size: 1.8vw;
+    padding: 1.45vw 6.45vw;
     letter-spacing: 2px;
-    width: 100%;
+    width: 90%;
 
 }
 .checkout .productdetails .addto .addtocart:active{
 
-    padding: 1.8vw 6.3vw;
+  padding: 1.34vw 6.23vw;
 
 }
 .checkout .productdetails .addto .counters{
@@ -847,16 +968,85 @@ button{
     padding: 1vw;
 }
 .checkout .productdetails .addto .counters button{
-    font-size: 3vw;
+    font-size: 2.5vw;
+    padding: 3px;
     font-weight: 500;
 }
 .checkout .productdetails .addto .counters .count{
-    font-size: 2.6vw;
+    font-size: 2vw;
     font-weight: 300;
 }
 
 }
+@media screen and (max-width:380px) {
+/* checkout  */
+.checkout .productimage{
+  height: 30vh;
+}
+.checkout .productdetails{
+  width: 100%;
+  height: 80%;
+  gap: 1px;
+  padding-left:3vw;
+}
+.checkout .productdetails .productname{
+    font-size: 5.6vw;
+}
+.checkout .productdetails .desc{
+    font-size: 3.2vw;
+}
+.checkout .productdetails .pricing .newpricing{
+    font-size: 3.4vw;
+}
+.checkout .productdetails .pricing .oldpricing{
+    font-size: 3.1vw;
+}
+.checkout .productdetails .note{
+    font-size: 2.2vw;
+    
+}
+.checkout .productdetails .note::before{
+  
+    width: 200%;
+    height: 0.5px;
+    
+}
+.checkout .productdetails .sizes{
+  margin-top: 10px;
+}
+.checkout .productdetails .sizes .sizetag{
+    font-size: 3.3vw;
+}
+.checkout .productdetails .sizes .sizesall{
+    font-size: 2.9vw;
+}
+.checkout .productdetails .addto{
+    width: 80%;
+    height: 5vh;
+}
+.checkout .productdetails .addto .addtocart{
+    font-size: 2.5vw;
+    padding: 2.4vw 8vw;
+    width: 90%;
 
+}
+.checkout .productdetails .addto .addtocart:active{
+
+  padding: 2.3vw 7vw;
+
+}
+.checkout .productdetails .addto .counters{
+    width: 16vw;
+    height: 55%;
+}
+.checkout .productdetails .addto .counters button{
+    font-size: 4vw;
+}
+.checkout .productdetails .addto .counters .count{
+    font-size: 3.2vw;
+}
+
+}
 
 
 
@@ -906,28 +1096,58 @@ button{
 }
 
 
-@media screen and (width<=850px) {
+@media only screen and (max-width:850px){
   .facilities{
-    width: 70%;
-    margin-top: 5.6vw;
+    width: 66%;
+    margin-top: 3vw;
+    flex-wrap: wrap;
     
   }
   .facility{
-    gap: 7px;
+    gap: 3px;
     min-width: 150px;
+
   
   }
   .facility .iconImg{
-    font-size: 3.6vw;
+    font-size: 3vw;
   
   }
   .facility h1{
-    font-size: 2.1vw;
+    font-size: 1.8vw;
   
   }
   .facility p{
     font-size: 1.5vw;
     width: 14vw;
+  }
+
+}
+
+@media only screen and (max-width:380px) {
+  .facilities{
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    gap: 3vw;
+    margin-top: 2vw;
+  }
+  .facility{
+    gap: 1px;
+    min-width: 150px;
+  
+  }
+  .facility .iconImg{
+    font-size: 6vw;
+  
+  }
+  .facility h1{
+    font-size: 3.4vw;
+  
+  }
+  .facility p{
+    font-size: 2.5vw;
+    width: 25vw;
   }
 
 }
@@ -995,7 +1215,26 @@ button{
   }
 
 }
+@media only screen and (max-width:380px) {
+  .homepagefacility .facility{
+    gap: 5px; 
+  }
+  
+  .homepagefacility .facility .iconImg{
+    font-size: 5.4vw;
+  
+  }
+  .homepagefacility .facility h1{
+    font-size: 2.8vw;
+    width: 50%;
+  
+  }
+  .homepagefacility .facility p{
+    font-size: 2.3vw;
+    width: 40%;
+  }
 
+}
 
 
 
@@ -1227,11 +1466,11 @@ width: 0;
 @media screen and (width<=850px) {
 /* cart pop */
 .cartcontainer{
-  width:70vw;
-  
+  width:60vw;
+  height: 98vh;
 }
 .cartcontainer .head{
- height: 4vh;
+ height: 10vh;
 }
 
 
@@ -1241,12 +1480,13 @@ width: 0;
  
 }
 .cartcontainer .head .closecart{
- font-size: 4vw;
+ font-size: 3.4vw;
  margin-right: 2vw;
 }
 .cartcontainer .allcarts{
 width: 96%;
 gap: 8px;
+box-shadow: none;
 }
 .isempty{
   width: 50vw;
@@ -1271,29 +1511,107 @@ object-fit: cover;
 margin-left: 1vw;
 }
 .cartcontainer .allcarts .cartitem .right{
-gap: 3.6vw;
+gap: 2.5vw;
 margin-bottom: 1vw;
 }
 .cartcontainer .allcarts .cartitem .right .detail{
-gap: 4px;
+gap: 2px;
 
 }
 .cartcontainer .allcarts .cartitem .right .detail h1{
-font-size: 2.9vw;
+font-size: 2.7vw;
 }
 .cartcontainer .allcarts .cartitem .right .detail small{
-font-size: 2.1vw;
+font-size: 1.8vw;
 }
 .cartcontainer .allcarts .cartitem .right .otherremove .remove{
-font-size: 2.5vw;
+font-size: 2vw;
 }
 .cartcontainer .allcarts .cartitem .right .otherremove .pricing{
-  font-size: 2.5vw;
+  font-size: 2vw;
 gap: 16px;
 }
 .cartcontainer .allcarts .cartitem .right .otherremove{
   gap: 12vw;
   }
+
+.totalncheckout{
+  height: 14vh;
+}
+.totalncheckout .totalpricing{
+  padding-left: 2.2vw;
+}
+.totalncheckout .totalpricing h1{
+ font-size: 2.5vw;
+}
+.totalncheckout .totalpricing small{
+ font-size: 2.1vw;
+ padding-left: 5px;
+}
+.totalncheckout .checkoutpayment{
+ letter-spacing: 5px;
+ font-size: 2.2vw;
+ height: 9vh;
+ width: 93%;
+}
+}
+@media screen and (max-width:380px) {
+/* cart pop */
+.cartcontainer{
+  width:80vw;
+  height: 90vh;
+}
+.cartcontainer .head{
+ height: 4vh;
+}
+
+
+.cartcontainer .head h1{
+ font-size: 3.8vw;
+ padding-left: 2vw;
+ 
+}
+.cartcontainer .head .closecart{
+ font-size: 4.5vw;
+}
+.isempty{
+  width: 50vw;
+  height: 20vh;
+  font-size: 5vw;
+}
+.isempty a{
+  font-size: 3.2vw;
+  gap: 2px;
+}
+
+.cartcontainer .allcarts .cartitem{
+  padding-top: 14px;
+gap: 10px;
+
+}
+
+.cartcontainer .allcarts .cartitem .left img{
+height: 15vw;
+}
+.cartcontainer .allcarts .cartitem .right{
+gap: 2.5vw;
+}
+.cartcontainer .allcarts .cartitem .right .detail{
+gap: 2px;
+
+}
+.cartcontainer .allcarts .cartitem .right .detail h1{
+font-size: 3.6vw;
+}
+.cartcontainer .allcarts .cartitem .right .detail small{
+font-size: 2.8vw;
+}
+.cartcontainer .allcarts .cartitem .right .otherremove .remove{
+font-size: 3vw;
+}
+.cartcontainer .allcarts .cartitem .right .otherremove .pricing{
+  font-size: 3vw;
+}
 
 .totalncheckout{
   height: 10vh;
@@ -1302,14 +1620,237 @@ gap: 16px;
   padding-left: 2.6vw;
 }
 .totalncheckout .totalpricing h1{
- font-size: 2.7vw;
+ font-size: 4vw;
 }
 .totalncheckout .totalpricing small{
- font-size: 2.5vw;
- padding-left: 5px;
+ font-size: 3.6vw;
 }
 .totalncheckout .checkoutpayment{
- letter-spacing: 4px;
- font-size: 2.3vw;
+ font-size: 3vw;
+ height: 6vh;
+}
+}
+
+
+/* payment checkout  */
+.paymentcheckout{
+  min-height: 70vh;
+  width: 80vw;
+  height: fit-content;
+  margin: 5vw auto;
+  display: flex;
+  align-items: first baseline;
+  justify-content: first baseline;
+  background: var(--bg-color);
+  border-radius: 5px;
+  padding: 2vw;
+  box-shadow: 0 0 20px rgba(153, 153, 153, 0.258),
+  inset 0 -2px 30px rgba(214, 214, 214, 0.294),
+  inset -2px 0 20px rgba(214, 214, 214, 0.294);
+}
+.paymentcheckout .paymentstripe{
+  height: 100%;
+  width: 42vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 3vw;
+  position: relative;
+}
+.paymentcheckout .paymentstripe .payhead{
+  height: fit-content;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7vw;
+}
+.paymentcheckout .paymentstripe .payhead img{
+  height: 3vh;
+}
+.paymentcheckout .paymentstripe .payhead small{
+  font-weight: 500;
+  color: var(--product-desc-clr);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5vw;
+  font-size: 1vw;
+  text-transform: capitalize;
+}
+.paymentcheckout .paymentstripe .contactarea,
+.paymentcheckout .paymentstripe .shipping_details{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vw;
+}
+.paymentcheckout .paymentstripe .contactarea h1,
+.paymentcheckout .paymentstripe .shipping_details h1{
+  font-size: 1.5vw;
+  font-weight: 300;
+  color: var(--fg-color);
+}
+.paymentcheckout .paymentstripe .contactarea input[type="email"],
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]
+{
+  font-size: 1.2vw;
+  font-weight: 100;
+  color: var(--fg-color);
+  border: 1px solid rgba(128, 128, 128, 0.444);
+  background: transparent;
+  width: 40vw;
+  border-radius: 5px;
+  padding: 0.8vw 1.1vw;
+  transition: 100ms ease-in-out;
+
+}
+.paymentcheckout .paymentstripe .contactarea input[type="email"]:where(:focus,:hover),
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]:where(:focus,:hover)
+{
+  border: 1px solid var(--fg-color);
+
+}
+.paymentcheckout .paymentstripe .contactarea input[type="email"]::placeholder,
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]::placeholder
+{
+  color: rgba(128, 128, 128, 0.463);
+}
+.paymentcheckout .paymentstripe .contactarea input[type="email"]:where(:focus,:hover)::placeholder,
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]:where(:focus,:hover)::placeholder
+{
+  color: rgba(128, 128, 128, 0.763);
+}
+
+.paymentcheckout .paymentstripe .keepuptodate{
+  display: flex;
+  flex-direction: row;
+  gap: 0.3vw;
+}
+.paymentcheckout .paymentstripe .keepuptodate small{
+  font-size: 1.0.3vw;
+  word-spacing: -1px;
+  color: var(--product-desc-clr);
+}
+.paymentcheckout .paymentstripe input[type="submit"]{
+  font-size: 1.03vw;
+  color: var(--fg-color);
+  background: rgb(41, 213, 90);
+  padding: 1vw 1.4vw;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:100ms ease-out;
+}
+.paymentcheckout .paymentstripe input[type="submit"]:active{
+  opacity: 0.9;
+  padding: 0.96vw 1.3vw;
+}
+.paymentcheckout .paymentstripe input[type="checkbox"]{
+  accent-color: rgb(10, 9, 9);
+}
+
+
+@media screen and (width<=850px) {
+  /* payment checkout  */
+.paymentcheckout{
+  min-height: 30vh;
+  padding: 2.5vw;
+}
+.paymentcheckout .paymentstripe{
+  height: 100%;
+  width: 60vw;
+  gap: 3vw;
+}
+.paymentcheckout .paymentstripe .payhead{
+  gap: 0.9vw;
+}
+.paymentcheckout .paymentstripe .payhead img{
+  height: 2vh;
+}
+.paymentcheckout .paymentstripe .payhead small{
+  gap: 0.6vw;
+  font-size: 1.9vw;
+}
+.paymentcheckout .paymentstripe .contactarea,
+.paymentcheckout .paymentstripe .shipping_details{
+  gap: 1vw;
+}
+.paymentcheckout .paymentstripe .contactarea h1,
+.paymentcheckout .paymentstripe .shipping_details h1{
+  font-size: 2.4vw;
+}
+.paymentcheckout .paymentstripe .contactarea input[type="email"],
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]
+{
+  font-size: 2vw;
+  width: 57vw;
+  padding:1.3vw 1.6vw;
+
+}
+
+.paymentcheckout .paymentstripe .keepuptodate{
+  gap: 0.8vw;
+}
+.paymentcheckout .paymentstripe .keepuptodate small{
+  font-size: 1.8vw;
+}
+.paymentcheckout .paymentstripe .keepuptodate input{
+  margin-left: 0.5vw;
+}
+.paymentcheckout .paymentstripe input[type="submit"]{
+  font-size: 2.2vw;
+  padding: 1.4vw 1.8vw;
+}
+.paymentcheckout .paymentstripe input[type="submit"]:active{
+  padding:  1.35vw 1.75vw;
+}
+}
+@media screen and (max-width:850px) {
+  /* payment checkout  */
+.paymentcheckout{
+  min-height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+.paymentcheckout .paymentstripe .payhead{
+  gap: 1.1vw;
+}
+.paymentcheckout .paymentstripe .payhead img{
+  height: 2.2vh;
+}
+.paymentcheckout .paymentstripe .payhead small{
+  font-size: 2.5vw;
+}
+.paymentcheckout .paymentstripe{
+  gap: 6vw;
+}
+.paymentcheckout .paymentstripe .contactarea,
+.paymentcheckout .paymentstripe .shipping_details{
+  gap: 2vw;
+}
+.paymentcheckout .paymentstripe .contactarea h1,
+.paymentcheckout .paymentstripe .shipping_details h1{
+  font-size: 3.2vw;
+}
+.paymentcheckout .paymentstripe .contactarea input[type="email"],
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]
+{
+  font-size: 2.8vw;
+  border-radius:3px ;
+
+}
+.paymentcheckout .paymentstripe .keepuptodate small{
+  font-size:2.3vw;
+  word-spacing: -1px;
+}
+.paymentcheckout .paymentstripe .keepuptodate input{
+  height: 2.8vw;
+}
+.paymentcheckout .paymentstripe input[type="submit"]{
+  font-size: 2.6vw;
+  border-radius: 5px;
 }
 }

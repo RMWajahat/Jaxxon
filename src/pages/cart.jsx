@@ -9,8 +9,8 @@ import { NavLink } from "react-router-dom";
 
 
 const Cart = (props) => {
-    var [total,setTotal] = useState(742);
-    var [cartitems,setCartitems] = useState(2);
+    var [total,setTotal] = useState(742*2);
+    var [cartitems,setCartitems] = useState(4);
   return (
     <div className="cartcontainer ">
         <div className="head">
@@ -21,13 +21,6 @@ const Cart = (props) => {
         </div>
         <div className="allcarts">
             {cartitems?<>
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
             <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
             <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
             <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
