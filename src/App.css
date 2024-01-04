@@ -59,12 +59,13 @@ a{
 }
 .navbar .inner{
   padding: 1vw 1vw;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 60%;
   position: relative;
   display: grid;
   place-items: center;
   grid-template-columns: 90% 10%;
+  overflow: hidden;
 }
 .navbar .inner img{
  height: 3.8vh;
@@ -111,22 +112,23 @@ a{
 @media screen and (max-width:850px) {
   /* navbar */
 .navbar{
-  width: 98vw;
+  width: 100vw;
   height: 8vw;
 }
 .navbar .inner img{
- height: 3.2vh;
+ height: 4vw;
 }
 .navbar .inner .links{
   gap: 3vw;
+  padding-right: 4vw;
 }
 
 .navbar .inner .links .contact{
-  font-size: 2.3vw;
+  font-size: 2.7vw;
 }
 
 .navbar .inner .links .carticon{
-  font-size: 3vw;
+  font-size: 3.3vw;
 }
 }
 @media screen and (max-width:380px) {
@@ -1676,25 +1678,27 @@ font-size: 3vw;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5vw;
+  gap: 1vw;
   font-size: 1vw;
   text-transform: capitalize;
 }
 .paymentcheckout .paymentstripe .contactarea,
-.paymentcheckout .paymentstripe .shipping_details{
+.paymentcheckout .paymentstripe .shipping_details,
+.paymentcheckout .paymentstripe .cardinfo{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1vw;
+  gap: 0.5vw;
 }
-.paymentcheckout .paymentstripe .contactarea h1,
-.paymentcheckout .paymentstripe .shipping_details h1{
+.paymentcheckout .paymentstripe :where(.contactarea, .shipping_details, .cardinfo) h1{
   font-size: 1.5vw;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--fg-color);
 }
 .paymentcheckout .paymentstripe .contactarea input[type="email"],
-.paymentcheckout .paymentstripe .shipping_details input[type="text"]
+.paymentcheckout .paymentstripe .shipping_details input[type="text"],
+.paymentcheckout .paymentstripe .cardinfo input[type="text"],
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="password"]
 {
   font-size: 1.2vw;
   font-weight: 100;
@@ -1707,19 +1711,32 @@ font-size: 3vw;
   transition: 100ms ease-in-out;
 
 }
+.paymentcheckout .paymentstripe .cardinfo .carddata{
+  justify-content: space-between;
+}
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="text"],
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="password"]
+{
+  width: 18.7vw;
+}
 .paymentcheckout .paymentstripe .contactarea input[type="email"]:where(:focus,:hover),
-.paymentcheckout .paymentstripe .shipping_details input[type="text"]:where(:focus,:hover)
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]:where(:focus,:hover),
+.paymentcheckout .paymentstripe .cardinfo :is(input[type="text"]):where(:focus,:hover),
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="password"]:where(:focus,:hover)
 {
   border: 1px solid var(--fg-color);
 
 }
 .paymentcheckout .paymentstripe .contactarea input[type="email"]::placeholder,
-.paymentcheckout .paymentstripe .shipping_details input[type="text"]::placeholder
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]::placeholder,
+.paymentcheckout .paymentstripe .cardinfo :is(input[type="text"],input[type="password"])::placeholder
 {
   color: rgba(128, 128, 128, 0.463);
 }
 .paymentcheckout .paymentstripe .contactarea input[type="email"]:where(:focus,:hover)::placeholder,
-.paymentcheckout .paymentstripe .shipping_details input[type="text"]:where(:focus,:hover)::placeholder
+.paymentcheckout .paymentstripe .shipping_details input[type="text"]:where(:focus,:hover)::placeholder,
+.paymentcheckout .paymentstripe .cardinfo input[type="text"]:where(:focus,:hover)::placeholder,
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="password"]:where(:focus,:hover)::placeholder
 {
   color: rgba(128, 128, 128, 0.763);
 }
@@ -1730,7 +1747,7 @@ font-size: 3vw;
   gap: 0.3vw;
 }
 .paymentcheckout .paymentstripe .keepuptodate small{
-  font-size: 1.0.3vw;
+  font-size: 1.03vw;
   word-spacing: -1px;
   color: var(--product-desc-clr);
 }
@@ -1753,7 +1770,7 @@ font-size: 3vw;
 }
 
 
-@media screen and (width<=850px) {
+@media screen and (max-width:850px) {
   /* payment checkout  */
 .paymentcheckout{
   min-height: 30vh;
@@ -1775,20 +1792,29 @@ font-size: 3vw;
   font-size: 1.9vw;
 }
 .paymentcheckout .paymentstripe .contactarea,
-.paymentcheckout .paymentstripe .shipping_details{
+.paymentcheckout .paymentstripe .shipping_details,
+.paymentcheckout .paymentstripe .cardinfo{
   gap: 1vw;
 }
 .paymentcheckout .paymentstripe .contactarea h1,
-.paymentcheckout .paymentstripe .shipping_details h1{
+.paymentcheckout .paymentstripe .shipping_details h1, 
+.paymentcheckout .paymentstripe .cardinfo h1{
   font-size: 2.4vw;
 }
 .paymentcheckout .paymentstripe .contactarea input[type="email"],
-.paymentcheckout .paymentstripe .shipping_details input[type="text"]
-{
+.paymentcheckout .paymentstripe .shipping_details input[type="text"],
+.paymentcheckout .paymentstripe .cardinfo input[type="text"]{
   font-size: 2vw;
   width: 57vw;
   padding:1.3vw 1.6vw;
 
+}
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="text"],
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="password"]
+{
+  font-size: 2vw;
+  width: 26vw;
+  padding:1.3vw 1.6vw;
 }
 
 .paymentcheckout .paymentstripe .keepuptodate{
@@ -1808,7 +1834,8 @@ font-size: 3vw;
   padding:  1.35vw 1.75vw;
 }
 }
-@media screen and (max-width:850px) {
+
+@media screen and (max-width:380px) {
   /* payment checkout  */
 .paymentcheckout{
   min-height: 50vh;
@@ -1825,18 +1852,22 @@ font-size: 3vw;
   font-size: 2.5vw;
 }
 .paymentcheckout .paymentstripe{
-  gap: 6vw;
+  gap: 4vw;
 }
 .paymentcheckout .paymentstripe .contactarea,
-.paymentcheckout .paymentstripe .shipping_details{
+.paymentcheckout .paymentstripe .shipping_details,
+.paymentcheckout .paymentstripe .cardinfo{
   gap: 2vw;
 }
 .paymentcheckout .paymentstripe .contactarea h1,
-.paymentcheckout .paymentstripe .shipping_details h1{
+.paymentcheckout .paymentstripe .shipping_details h1,
+.paymentcheckout .paymentstripe .cardinfo h1{
   font-size: 3.2vw;
 }
 .paymentcheckout .paymentstripe .contactarea input[type="email"],
-.paymentcheckout .paymentstripe .shipping_details input[type="text"]
+.paymentcheckout .paymentstripe .shipping_details input[type="text"],
+.paymentcheckout .paymentstripe .cardinfo input[type="text"],
+.paymentcheckout .paymentstripe .cardinfo .carddata input[type="password"]
 {
   font-size: 2.8vw;
   border-radius:3px ;
@@ -1846,9 +1877,10 @@ font-size: 3vw;
   font-size:2.3vw;
   word-spacing: -1px;
 }
-.paymentcheckout .paymentstripe .keepuptodate input{
+.paymentcheckout .paymentstripe .keepuptodate input[type="checkbox"]{
   height: 2.8vw;
 }
+
 .paymentcheckout .paymentstripe input[type="submit"]{
   font-size: 2.6vw;
   border-radius: 5px;
