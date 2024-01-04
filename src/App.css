@@ -894,6 +894,39 @@ footer .left .sociallinks a .social{
 button{
   cursor: pointer;
 }
+.CardNumberElement {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d2d6dc;
+  outline: none;
+}
+/* For CardExpiryElement */
+.card-expiry-element {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d2d6dc;
+  outline: none;
+}
+
+.card-expiry-element:focus {
+  border-color: #93c5fd;
+}
+
+/* For CardCvcElement */
+.card-cvc-element {
+  width: 30vw;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d2d6dc;
+  outline: none;
+}
+
+.card-cvc-element:focus {
+  border-color: #93c5fd;
+}
+
 
 .addtocart{
   font-weight:500;
