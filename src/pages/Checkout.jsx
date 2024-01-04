@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react';
 import watchImg from '../assets/watch1.jpeg';
 import { useState } from 'react';
 import Facility from '../components/Facility';

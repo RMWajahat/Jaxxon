@@ -4,7 +4,6 @@ import product3 from "../assets/watch3.jpeg";
 import product4 from "../assets/watch4.jpeg";
 import product5 from "../assets/watch5.jpeg";
 import product6 from "../assets/watch6.jpeg";
-// import Checkout from "../pages/Checkout";
 import { useState } from "react";
 
 import Product from "./Product";
@@ -80,7 +79,7 @@ const ProductList = () => {
       <h1 className="collections">Our Collections</h1>
       <div className="products">
         {watchList.map((product) => (
-          <NavLink to={"/checkout"} key={product.id}>
+          <NavLink to={`/checkout/${product.id}`} key={product.id}>
             <Product
               productname={product.productname}
               productdescription={product.productdescription}

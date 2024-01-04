@@ -1250,7 +1250,7 @@ button{
 
 /* cart pop */
 .cartcontainer{
-  width:40vw;
+  width:35vw;
   height: 96vh;
   overflow: hidden;
   background: var(--bg-color);
@@ -1306,9 +1306,8 @@ flex-direction: column;
 gap: 2px;
 height: 80vh;
 overflow: hidden;
+align-items: start;
 overflow-y: scroll;
-box-shadow:inset 0  0 5px rgba(58, 58, 58, 0.243);
-align-items: center;
 }
 .isempty{
   width: 30vw;
@@ -1343,7 +1342,7 @@ align-items: center;
 .cartcontainer .allcarts .cartitem{
   padding-top: 5px;
 height: fit-content;
-width: 100%;
+width: 130%;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
@@ -1357,14 +1356,14 @@ gap: 5px;
 }
 
 .cartcontainer .allcarts .cartitem .left img{
-height: 10vw;
+height: 8vw;
 aspect-ratio: 1/1;
 object-fit: contain;
 }
 .cartcontainer .allcarts .cartitem .right{
 display: flex;
 flex-direction: column;
-gap: 4vw;
+gap: 3vw;
 }
 .cartcontainer .allcarts .cartitem .right .detail{
 display: flex;
@@ -1385,6 +1384,7 @@ font-weight: 400;
 .cartcontainer .allcarts .cartitem .right .otherremove{
 display: flex;
 flex-direction: row;
+justify-content: space-between;
 }
 .cartcontainer .allcarts .cartitem .right .otherremove .remove{
 font-size: 1.2vw;
