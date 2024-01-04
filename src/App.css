@@ -895,7 +895,14 @@ button{
   cursor: pointer;
 }
 
-
+.addtocart{
+  font-weight:500;
+  background: var(--fg-color);
+  color: var(--bg-color);
+  cursor: pointer;
+  padding: 3px;
+  transition: 100ms ease-in-out;
+}
 @media screen and (width<=850px) {
 /* checkout  */
 .checkout{

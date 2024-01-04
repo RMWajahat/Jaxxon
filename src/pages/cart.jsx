@@ -1,48 +1,80 @@
 import { Icon } from "@iconify/react";
-import Item from "../components/Item";
-
 import Watch from "../assets/watch1.jpeg";
-import Watch2 from "../assets/watch2.jpeg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-
-
 const Cart = (props) => {
-    var [total,setTotal] = useState(742*2);
-    var [cartitems,setCartitems] = useState(4);
-  return (
-    <div className="cartcontainer ">
-        <div className="head">
-            <h1>Your Cart <span>({cartitems})</span></h1>
-            <Icon className="closecart" icon="material-symbols:close" onClick={()=>{
-                props.setShowcart(false);
-            }} />
-        </div>
-        <div className="allcarts">
-            {cartitems?<>
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch} itemname={"Cuban Watch - 8mm"} oldprice={303} newprice={256} typedata={'Gold + Pure Black, 22"'} />
-            <Item watch={Watch2} itemname={"Lamma Watch Gold"} oldprice={500} newprice={486} typedata={'Gold, 22" + 24"'} />
-            </>: <span className="isempty">Your Cart in Empty😢 <br /> <NavLink to={"products"} onClick={()=>{
-                props.setShowcart(false);
-            }} >Come Let's go to shop <Icon className="goback" icon="maki:arrow" /></NavLink> </span>
-            }
-            
-            
-        </div>
-        <div className="totalncheckout">
-            <div className="totalpricing">
-                <h1>Total: </h1>
-                <small>${total}</small>
+    const [total, setTotal] = useState(742 * 2);
+    const [cartitems, setCartitems] = useState([]);
+
+    useEffect(() => {
+        const storedProducts = JSON.parse(localStorage.getItem("addedProducts"));
+        if (storedProducts && Array.isArray(storedProducts)) {
+            setCartitems(storedProducts);
+        }
+    }, []);
+
+    useEffect(() => {
+        console.log("Stored Products:", cartitems);
+    }, [cartitems]);
+
+    const removeFromCart = (productId) => {
+        const updatedCart = cartitems.filter(product => product.id !== productId);
+        setCartitems(updatedCart);
+        localStorage.setItem("addedProducts", JSON.stringify(updatedCart));
+    };
+
+    return (
+        <div className="cartcontainer ">
+            <div className="head">
+                <h1>Your Cart <span>({cartitems.length})</span></h1>
+                <Icon className="closecart" icon="material-symbols:close" onClick={() => {
+                    props.setShowcart(false);
+                }} />
             </div>
-            <NavLink to={"payment"} onClick={()=>{
-                props.setShowcart(false);
-            }} className="checkoutpayment">Checkout</NavLink>
+            <div className="allcarts">
+                {cartitems.length ? <>
+                    <div>
+                        {cartitems.map((product) => (
+                            <div className="cartitem" key={product.id}>
+                                <div className="left">
+                                    <img alt="product" src={Watch} />
+                                </div>
+                                <div className="right">
+                                    <div className="detail">
+                                        <h1>{product.productname}</h1>
+                                        <small>{product.productdescription}</small>
+                                    </div>
+                                    <div className="otherremove">
+                                        <button className="remove" onClick={() => removeFromCart(product.id)}>
+                                            <Icon className="closecart" icon="material-symbols:close" />
+                                            Remove
+                                        </button>
+                                        <div className="pricing">
+                                            {product.oldprice === 0 ? <span className="oldone"></span> : <span className="oldone">${product.oldprice}</span>}
+                                            <span className="newone">${product.newprice}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </> : <span className="isempty">Your Cart is Empty😢 <br /> <NavLink to={"products"} onClick={() => {
+                    props.setShowcart(false);
+                }} >Come Let's go to shop <Icon className="goback" icon="maki:arrow" /></NavLink> </span>
+                }
+            </div>
+            <div className="totalncheckout">
+                <div className="totalpricing">
+                    <h1>Total: </h1>
+                    <small>${total}</small>
+                </div>
+                <NavLink to={"payment"} onClick={() => {
+                    props.setShowcart(false);
+                }} className="checkoutpayment">Checkout</NavLink>
+            </div>
         </div>
-    </div>
-  )
+    );
 }
 
 export default Cart;
