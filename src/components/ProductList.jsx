@@ -5,12 +5,22 @@ import product4 from "../assets/watch4.jpeg";
 import product5 from "../assets/watch5.jpeg";
 import product6 from "../assets/watch6.jpeg";
 // import Checkout from "../pages/Checkout";
-
+import { useState } from "react";
 
 import Product from "./Product";
 import { NavLink } from "react-router-dom";
 
 const ProductList = () => {
+  const existingProducts = JSON.parse(localStorage.getItem("addedProducts")) || [];
+  const [addedProducts, setAddedProducts] = useState(existingProducts);
+
+  const addToCart = (product) => {
+    // Update the state with the new product
+    setAddedProducts([...addedProducts, product]);
+
+    // Update local storage with the new products
+    localStorage.setItem("addedProducts", JSON.stringify([...addedProducts, product]));
+  }
   const watchList = [
     {
       id: 1,
@@ -42,7 +52,7 @@ const ProductList = () => {
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg:  product4 ,
       newprice: 110,
-      oldprice: null,
+      oldprice: 100,
     }
     ,
     {
@@ -66,21 +76,21 @@ const ProductList = () => {
 
 
   return (
-    <div className="productslist">
-      <h1 className="collections" >Our Collections</h1>
+   <div className="productslist">
+      <h1 className="collections">Our Collections</h1>
       <div className="products">
-
-        {
-          watchList.map((product) => {
-            // <Checkout key={product.id} productname={product.productname} productdescription={product.productdescription} productimg={product.productimg} newprice={product.newprice} oldprice={product.oldprice}  />
-            return <NavLink to={"/checkout"} ><Product key={product.id} productname={product.productname} productdescription={product.productdescription} productimg={product.productimg} newprice={product.newprice} oldprice={product.oldprice} /></NavLink>
-              
-          })
-        }
-
-
-
-
+        {watchList.map((product) => (
+          <NavLink to={"/checkout"} key={product.id}>
+            <Product
+              productname={product.productname}
+              productdescription={product.productdescription}
+              productimg={product.productimg}
+              newprice={product.newprice}
+              oldprice={product.oldprice}
+            />
+            <button className="addtocart" onClick={() => addToCart(product)}>Add to Cart</button>
+          </NavLink>
+        ))}
       </div>
     </div>
   )
