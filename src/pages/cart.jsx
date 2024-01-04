@@ -8,20 +8,24 @@ const Cart = (props) => {
     const [cartitems, setCartitems] = useState([]);
 
     useEffect(() => {
-        const storedProducts = JSON.parse(localStorage.getItem("addedProducts"));
+        const storedProducts = JSON.parse(localStorage.getItem("cartItems"));
         if (storedProducts && Array.isArray(storedProducts)) {
             setCartitems(storedProducts);
         }
     }, []);
 
     useEffect(() => {
-        console.log("Stored Products:", cartitems);
+        // Update the local storage whenever cartitems change
+        localStorage.setItem("cartItems", JSON.stringify(cartitems));
+
+        // Update total when cartitems change
+        const newTotal = cartitems.reduce((acc, product) => acc + product.newprice, 0);
+        setTotal(newTotal);
     }, [cartitems]);
 
     const removeFromCart = (productId) => {
         const updatedCart = cartitems.filter(product => product.id !== productId);
         setCartitems(updatedCart);
-        localStorage.setItem("addedProducts", JSON.stringify(updatedCart));
     };
 
     return (

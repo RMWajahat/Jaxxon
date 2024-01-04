@@ -13,13 +13,7 @@ const ProductList = () => {
   const existingProducts = JSON.parse(localStorage.getItem("addedProducts")) || [];
   const [addedProducts, setAddedProducts] = useState(existingProducts);
 
-  const addToCart = (product) => {
-    // Update the state with the new product
-    setAddedProducts([...addedProducts, product]);
-
-    // Update local storage with the new products
-    localStorage.setItem("addedProducts", JSON.stringify([...addedProducts, product]));
-  }
+ 
   const watchList = [
     {
       id: 1,
@@ -87,7 +81,6 @@ const ProductList = () => {
               newprice={product.newprice}
               oldprice={product.oldprice}
             />
-            <button className="addtocart" onClick={() => addToCart(product)}>Add to Cart</button>
           </NavLink>
         ))}
       </div>
