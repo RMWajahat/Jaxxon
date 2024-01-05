@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Cart = (props) => {
-    const [total, setTotal] = useState(742 * 2);
+    const [total, setTotal] = useState(0);
     const [cartitems, setCartitems] = useState([]);
 
     useEffect(() => {

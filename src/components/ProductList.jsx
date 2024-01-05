@@ -25,7 +25,7 @@ const ProductList = () => {
     },
     {
       id: 2,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link2 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg: product2 ,
       newprice: 50,
@@ -33,7 +33,7 @@ const ProductList = () => {
     },
     {
       id: 3,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link3 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg:  product3 ,
       newprice: 120,
@@ -41,7 +41,7 @@ const ProductList = () => {
     },
     {
       id: 4,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link4 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg:  product4 ,
       newprice: 110,
@@ -50,7 +50,7 @@ const ProductList = () => {
     ,
     {
       id: 5,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link5 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg: product5 ,
       newprice: 200,
@@ -59,7 +59,7 @@ const ProductList = () => {
     ,
     {
       id: 6,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link6 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg: product6 ,
       newprice: 1580,

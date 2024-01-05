@@ -9,7 +9,7 @@ import product4 from "../assets/watch4.jpeg";
 import product5 from "../assets/watch5.jpeg";
 import product6 from "../assets/watch6.jpeg";
 const Checkout = () => {
-  const [count, setCount] = useState(0);
+  let [count, setCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const { productid } = useParams();
   const productIdNumber = parseInt(productid, 10);
@@ -35,7 +35,7 @@ const Checkout = () => {
     },
     {
       id: 2,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link2 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg: product2 ,
       newprice: 50,
@@ -43,7 +43,7 @@ const Checkout = () => {
     },
     {
       id: 3,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link3 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg:  product3 ,
       newprice: 120,
@@ -51,7 +51,7 @@ const Checkout = () => {
     },
     {
       id: 4,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link4 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg:  product4 ,
       newprice: 110,
@@ -60,7 +60,7 @@ const Checkout = () => {
     ,
     {
       id: 5,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link5 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg: product5 ,
       newprice: 200,
@@ -69,7 +69,7 @@ const Checkout = () => {
     ,
     {
       id: 6,
-      productname: "Cuban Link Chain - 8mm",
+      productname: "Cuban Link6 Chain - 8mm",
       productdescription: "Includes Cuban Link Chain - 5mm",
       productimg: product6 ,
       newprice: 1580,
@@ -79,13 +79,11 @@ const Checkout = () => {
 
   const selectedProduct = watchList.find(product => product.id === productIdNumber);
 
-  if (!selectedProduct) {
-    return <div>No product found for the given id</div>;
-  }
-
 
   return (
     <div className="checkout">
+      {!selectedProduct?<div id="noproduct" ><span>404</span><span>😕</span>No product found!</div>:
+      <>
       <div className="productimage">
         <img src={selectedProduct.productimg} alt="" />
       </div>
@@ -117,6 +115,8 @@ const Checkout = () => {
           <Facility icontype={"icon-park:connection-arrow"} facilityname={"30 Days Return"} facitydesc={"& Exchange"} />
         </div>
       </div>
+      </>
+      }
     </div>
   );
 };

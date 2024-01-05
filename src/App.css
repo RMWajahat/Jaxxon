@@ -1926,3 +1926,22 @@ font-size: 3vw;
   border-radius: 5px;
 }
 }
+
+
+
+.checkout #noproduct{
+  width: 80vw;
+  height: 80vh;
+  text-align: center;
+  margin: auto;
+  font-weight: 500;
+  color: #202020;
+  font-size:3vw;
+  display: grid;
+  place-items: center;
+  padding-left: 5vw;
+}
+.checkout #noproduct span{
+  font-weight: 800;
+  font-size:8vw;
+}
