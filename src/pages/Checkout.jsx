@@ -15,14 +15,26 @@ const Checkout = () => {
   const productIdNumber = parseInt(productid, 10);
   const addToCart = (product) => {
     const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    const isProductInCart = existingCartItems.some((item) => item.id === product.id);
-    if (!isProductInCart) {
-      const updatedCart = [...existingCartItems, { ...product }];
-      localStorage.setItem('cartItems', JSON.stringify(updatedCart));
+    const existingProductIndex = existingCartItems.findIndex((item) => item.id === product.id);
+  
+    if (existingProductIndex !== -1) {
+      // If the product is already in the cart, update its quantity
+      existingCartItems[existingProductIndex].quantity += count + 1;
+    } else {
+      // If the product is not in the cart, add it with the current quantity
+      existingCartItems.push({ ...product, quantity: count + 1 });
     }
+  
+    const updatedCart = existingCartItems.map(item => {
+      // Calculate the new price based on the quantity
+      item.totalPrice = item.newprice * item.quantity;
+      return item;
+    });
+  
+    localStorage.setItem('cartItems', JSON.stringify(updatedCart));
     setCount(0);
   };
-  
+  console.log(count);
   
   const watchList = [
     {

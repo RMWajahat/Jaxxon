@@ -19,7 +19,7 @@ const Cart = (props) => {
         localStorage.setItem("cartItems", JSON.stringify(cartitems));
 
         // Update total when cartitems change
-        const newTotal = cartitems.reduce((acc, product) => acc + product.newprice, 0);
+        const newTotal = cartitems.reduce((acc, product) => acc + product.totalPrice, 0);
         setTotal(newTotal);
     }, [cartitems]);
 
@@ -42,7 +42,7 @@ const Cart = (props) => {
                         {cartitems.map((product) => (
                             <div className="cartitem" key={product.id}>
                                 <div className="left">
-                                    <img alt="product" src={Watch} />
+                                    <img alt="product" src={product.productimg} />
                                 </div>
                                 <div className="right">
                                     <div className="detail">
