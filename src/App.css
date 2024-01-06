@@ -1342,6 +1342,7 @@ overflow: hidden;
 align-items: start;
 overflow-y: scroll;
 }
+
 .isempty{
   width: 30vw;
   height: 70vh;

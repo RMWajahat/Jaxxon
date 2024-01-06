@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import Watch from "../assets/watch1.jpeg";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
